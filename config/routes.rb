@@ -1,4 +1,6 @@
 TeamAlpha::Application.routes.draw do
+  resources :users
+
   resources :certs
 
   resources :posts
