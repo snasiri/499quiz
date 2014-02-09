@@ -15,6 +15,7 @@
     <% @jobs.each do |job| %>
       <tr>
         <td><%= job.title %></td>
+        <td><%= job.user_id %></td>
         <td><%= job.location %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
