@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208053941) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "adminpack"
+ActiveRecord::Schema.define(version: 20140209134716) do
 
   create_table "certs", force: true do |t|
     t.string   "title"
@@ -30,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140208053941) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "posts", force: true do |t|
