@@ -14,7 +14,7 @@ TeamAlpha::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+    root :to => 'static_pages#home', :as => 'static_pages'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
