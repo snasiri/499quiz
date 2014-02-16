@@ -7,6 +7,8 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 
+# Use RSS reader/parser
+gem 'feedzirra'
 
 # Use sqlite3 as the database for Active Record
 group:development do
