@@ -1,9 +1,9 @@
 TeamAlpha::Application.routes.draw do
-<<<<<<< HEAD
+
   get "users/new"
   get "static_pages/home"
   get "static_pages/aboutus"
-=======
+
   root 'static_pages#home'
   match '/home', to: 'static_pages#home', via: 'get'
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
@@ -13,7 +13,7 @@ TeamAlpha::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
 
 
->>>>>>> 1c813d5884755aaaf4555de73fe74b013bd8cb1f
+
   resources :jobs
 
   resources :users
