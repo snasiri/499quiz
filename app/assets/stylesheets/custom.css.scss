@@ -4,7 +4,12 @@ $grayMediumLight: #eaeaea;
 
 html { overflow-y: scroll; }
 
-body { padding-top: 60px; }
+body { 
+background: url('wavy_background.jpg') no-repeat;
+background-position: center;
+background-size: 100%;
+padding-top: 60px; 
+}
 
 section { overflow: auto; }
 
@@ -16,12 +21,18 @@ textarea { resize: vertical; }
   }
 }
 
+#transparent {
+  background-color:rgba(255,255,255,0.5);
+  padding : 5px;
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
 h1 {
+  color: #E0E0E0;
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -64,11 +75,12 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: white;
   a {
-    color: $gray;
+    color: white;
     &:hover {
-      color: $grayDarker;
+      color: $gray;
+      text-decoration: none;
     }
   }
   small {
@@ -83,3 +95,4 @@ footer {
     }
   }
 }
+
