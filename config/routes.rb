@@ -13,11 +13,11 @@ TeamAlpha::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
 
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #>>>>>>> 1c813d5884755aaaf4555de73fe74b013bd8cb1f
-=======
+#=======
 
->>>>>>> a372c66ea18f7ba7de732adea2d6ce62486af372
+#>>>>>>> a372c66ea18f7ba7de732adea2d6ce62486af372
   resources :jobs
 
   resources :users
