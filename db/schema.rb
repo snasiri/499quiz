@@ -11,15 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140215224552) do
+=======
 ActiveRecord::Schema.define(version: 20140216004318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+>>>>>>> de53b0be474a61dd84a7a272dc7e439fe4eb4787
 
   create_table "certs", force: true do |t|
     t.string   "title"
     t.integer  "user_id"
     t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feed_entries", force: true do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.string   "url"
+    t.datetime "published_at"
+    t.string   "guid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
