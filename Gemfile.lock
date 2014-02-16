@@ -68,7 +68,10 @@ GEM
       mini_portile (~> 0.5.0)
     nokogiri (1.6.1-x86-mingw32)
       mini_portile (~> 0.5.0)
+<<<<<<< HEAD
     pg (0.15.1-x86-mingw32)
+=======
+>>>>>>> 98444e671abe45fc2786c44409744abb9ce27ddd
     pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.3)

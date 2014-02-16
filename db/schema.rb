@@ -13,9 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20140216004318) do
 
+<<<<<<< HEAD
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+=======
+>>>>>>> 98444e671abe45fc2786c44409744abb9ce27ddd
   create_table "certs", force: true do |t|
     t.string   "title"
     t.integer  "user_id"
@@ -56,6 +59,6 @@ ActiveRecord::Schema.define(version: 20140216004318) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
