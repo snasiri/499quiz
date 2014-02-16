@@ -28,7 +28,6 @@ GEM
     arel (4.0.2)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -66,14 +65,7 @@ GEM
     multi_json (1.8.4)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
-    nokogiri (1.6.1-x86-mingw32)
-      mini_portile (~> 0.5.0)
-<<<<<<< HEAD
-    pg (0.15.1-x86-mingw32)
-=======
->>>>>>> 98444e671abe45fc2786c44409744abb9ce27ddd
     pg (0.17.1)
-    pg (0.17.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
