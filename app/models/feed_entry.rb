@@ -1,6 +1,6 @@
 class FeedEntry < ActiveRecord::Base  
 # Provides RSS parsing capabilities
-require 'Feedzirra'
+#require 'Feedzirra'
 
 
 
