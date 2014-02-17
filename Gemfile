@@ -13,8 +13,9 @@ gem 'feedzirra'
 # Use sqlite3 as the database for Active Record
 # ~snasiri i added spec here to follow along in chp 6.
 group :development, :test do
-	gem 'sqlite3', '1.3.8'
+	#gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
+	gem 'pg'
 end
 
 # Use SCSS for stylesheets
@@ -43,8 +44,6 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
-
-gem 'pg', '0.17.1'
 gem 'rails_12factor', '0.0.2'
 
 # Use ActiveModel has_secure_password
