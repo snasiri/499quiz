@@ -1,0 +1,3 @@
+2/22/13 - I have been working on adding the sign-up page and creating the user profile. I have ran in to an issue:
+  - I am having trouble getting the password and password_confirmation to validate properly so the profile page can display.
+  - Le has offered to assist me. In the meantime I will keep trying to solve it.
