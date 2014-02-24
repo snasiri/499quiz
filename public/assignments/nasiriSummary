@@ -4,6 +4,7 @@
   
 2/24/13 - The issue has been resolved. Users can now sign up and view their profile page.
   - Email, password, and password_confirmation validations all work.
+  - Installed devise, an authentication gem.
   - Users can associate a gravatar with their email. I tested it with my gravatar and it works.
   - Used flash variable to display a message to user upon successfully signing up (we can add it for successfull posts too etc.).
 
