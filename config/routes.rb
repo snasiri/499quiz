@@ -3,6 +3,7 @@ TeamAlpha::Application.routes.draw do
   get "users/new"
   get "static_pages/home"
   get "static_pages/aboutus"
+  get "static_pages/addNews"
 
   root 'static_pages#home'
   match '/home', to: 'static_pages#home', via: 'get'
@@ -11,6 +12,7 @@ TeamAlpha::Application.routes.draw do
   match '/blogs', to: 'static_pages#blog', via: 'get'
   match '/signin', to: 'static_pages#signIn', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/addNews', to: 'static_pages#addNews', via: 'get'
 
 
   resources :jobs

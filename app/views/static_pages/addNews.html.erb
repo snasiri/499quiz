@@ -1,0 +1,57 @@
+<% provide(:title, 'About Us' ) %>
+<title>Add News Articles</title>
+<script>
+function getCount(form) {
+	value = document.addNews.q.value;
+	if (value =="") {
+		alert("Nothing was entered!");
+	}
+	else {
+	value = <% FeedEntry.count %>
+	}
+}
+
+</script
+
+<h1>Add News Articles from RSS Feeds</h1>
+<div id="transparent">
+<%= form_tag("/addNews", method: "get") do %>
+	<%= label_tag(:q, "RSS Link:") %> <br />
+	<%= text_field_tag(:q) %> <br />
+	<%= submit_tag("Submit") %> <br />
+	<% end %>
+
+<div>
+<form name="test">
+<input type="submit" name="count" value="Get Count of Records" onclick="RSSCount(this.form)">
+Count of Records: <input type="text" name="field1">
+<textarea rows="10" cols="10">
+<% FeedEntry.count %>
+</textarea>
+
+</form>
+</div>
+
+<div>
+<ul>
+<% for entry in FeedEntry.all(:limit => 10, :order => "published_at desc") %>
+	<li><%= link_to h(entry.name) %> 
+	</li>
+	<% end %>
+	</ul>
+</div>
+
+
+<div>
+	<ul>
+	<% for entry in User.all(:limit => 10, :order => "name desc") %>
+		<li><%= link_to h(entry.name) %> <br />
+		<%= h(entry.id) %>
+		</li>
+		<% end %>
+		</ul>
+</div>
+
+</div>
+
+
