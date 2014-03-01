@@ -10,7 +10,7 @@ TeamAlpha::Application.routes.draw do
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
   match '/blogs', to: 'static_pages#blog', via: 'get'
-  #match '/signin', to: 'static_pages#signIn', via: 'get' // greyed out becasue it should be routed to sessions
+  #match '/signin', to: 'static_pages#signIn', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'users#new', via: 'get'
   match '/signin',  to: 'sessions#new', via: 'get'
