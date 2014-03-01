@@ -49,6 +49,7 @@ end
 
 gem 'rails_12factor', '0.0.2'
 gem 'protected_attributes'
+gem 'sqlite3'
 gem 'pg', '0.17.1'
 
 # Use ActiveModel has_secure_password

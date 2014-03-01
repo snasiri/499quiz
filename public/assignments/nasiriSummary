@@ -7,3 +7,5 @@
   - Users can associate a gravatar with their email. I tested it with my gravatar and it works.
   - Used flash variable to display a message to user upon successfully signing up (we can add it for successfull posts too etc.).
 
+3/1/13 - Completed Chapter 8
+  - Users can now sign in and out of their accounts.
