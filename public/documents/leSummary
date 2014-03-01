@@ -1,0 +1,33 @@
+Weekly Summaries for Le
+
+Feb. 12 - 18
+static_pages
+ - Edited the routes.rb to link all of the pages to menu items
+ - Updated the aboutUs page using asset pipeline, css, and minor html
+ - Updated various pages into "partials" for faster loading
+ - Populated news page with articles retrieved out of the database
+
+CSS
+ - added background image - located in custom.css.scss
+ - worked on color scheme of site
+
+ Code
+  - created methods to import RSS security feeds into the database
+  - added RoR code on news page to automatically pull from database feed_entries table.  (top 10 articles, by "published_date")
+
+
+Feb. 19 - 25
+CSS
+ - update site with a new logo.  (drew logo in photoshop)
+ - added new information to the header portion of css
+ - modified footer with new tabs / links
+
+ static_pages
+ - updated home page with information on our project definition
+
+ **Planned work**
+  - complete the blog/micropost section on Hartl's book
+  - add more content
+  - add a calendar
+  - add the ability to import personal rss feeds to a profile (user has many rss_Feeds)
+  

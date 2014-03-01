@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217153847) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140225232509) do
+=======
+ActiveRecord::Schema.define(version: 20140225215605) do
+>>>>>>> 4decd3749d12fd8fb141f523411e5e9a66f9bcd1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +24,14 @@ ActiveRecord::Schema.define(version: 20140217153847) do
     t.string   "title"
     t.integer  "user_id"
     t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,8 +67,10 @@ ActiveRecord::Schema.define(version: 20140217153847) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.string   "remember_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
