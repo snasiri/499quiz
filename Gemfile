@@ -21,6 +21,9 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 
+# Used for calendar
+gem 'event-calendar', :require => 'event_calendar'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 
@@ -47,6 +50,7 @@ end
 gem 'rails_12factor', '0.0.2'
 gem 'protected_attributes'
 gem 'sqlite3'
+gem 'pg', '0.17.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

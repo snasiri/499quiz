@@ -7,6 +7,8 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+helper_method :count
+
   # GET /posts/1
   # GET /posts/1.json
   def show

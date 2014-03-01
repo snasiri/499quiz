@@ -1,5 +1,5 @@
 <h1>Listing users</h1>
-
+<div id="transparent">
 <table>
   <thead>
     <tr>
@@ -23,7 +23,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New User', new_user_path %>
+<div>
+<%= link_to("New User", new_user_path, :style=>'color:#FFFFFF', :class => 'btn btn-small btn-primary') %>
+</div>

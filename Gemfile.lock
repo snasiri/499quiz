@@ -42,6 +42,7 @@ GEM
     curb (0.8.5)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (2.0.2)
     feedzirra (0.7.1)
       curb (~> 0.8.1)
@@ -118,7 +119,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    sprockets (2.10.1)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -150,6 +151,7 @@ DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.0)
   coffee-rails (= 4.0.1)
+  event-calendar
   feedzirra
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
