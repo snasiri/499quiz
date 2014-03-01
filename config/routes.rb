@@ -9,7 +9,7 @@ TeamAlpha::Application.routes.draw do
   match '/home', to: 'static_pages#home', via: 'get'
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
-  match '/blogs', to: 'static_pages#blog', via: 'get'
+  match '/blogs', to: 'static_pages#posts', via: 'get'
   match '/signin', to: 'static_pages#signIn', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
