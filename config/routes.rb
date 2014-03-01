@@ -4,14 +4,17 @@ TeamAlpha::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/aboutus"
 
+
   root 'static_pages#home'
   match '/home', to: 'static_pages#home', via: 'get'
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
   match '/blogs', to: 'static_pages#blog', via: 'get'
-  match '/signin', to: 'static_pages#signIn', via: 'get'
+  #match '/signin', to: 'static_pages#signIn', via: 'get' // greyed out becasue it should be routed to sessions
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'users#new', via: 'get'
+  match '/signin',  to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
 
   resources :jobs
@@ -21,6 +24,8 @@ TeamAlpha::Application.routes.draw do
   resources :certs
 
   resources :posts
+
+  resources :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
