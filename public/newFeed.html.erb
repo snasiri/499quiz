@@ -1,0 +1,21 @@
+<% provide(:title, 'New Feed') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= full_title(yield(:title)) %></title>
+	<script>
+	function storeRSS(webLink) {
+		<%= FeedEntry.update_from_feed(document.getElementById("rssLink")); %>
+	}
+	</script>
+</head>
+<body>
+	<h1>Information Technology News - Security-Related</h1>
+<div id='transparent'>
+<form name="rssForm">
+RSS Link:<input type="text" name="rssLink">
+Submit <input type="submit" name="submit" onclick="storeRSS(rsslink)">
+</form>
+</div>
+</body>
+</html>
