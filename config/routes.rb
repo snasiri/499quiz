@@ -32,7 +32,7 @@ TeamAlpha::Application.routes.draw do
 
   resources :certs
 
-  resources :posts, only: [:create, :destroy]
+  resources :posts, only: [:create, :destroy, :edit, :new]
 
   resources :sessions, only: [:new, :create, :destroy]
 
