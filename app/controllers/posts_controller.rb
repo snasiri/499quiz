@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   #before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user
+  before_action :signed_in_user, only: [:create, :destroy]
+  before_action :correct_user, only: :destroy
 
   # GET /posts
   # GET /posts.json
@@ -27,16 +28,25 @@ helper_method :count
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    #@post = Post.new(post_params)
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @post }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    #respond_to do |format|
+      #if @post.save
+        #format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        #format.json { render action: 'show', status: :created, location: @post }
+      #else
+        #format.html { render action: 'new' }
+        #format.json { render json: @post.errors, status: :unprocessable_entity }
+      #end
+    #end
+
+    #updated from hartl's micropost section (10.27) le - 03012014
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      flash[:success] = "Post Created Successfully!"
+      redirect_to root_url
+    else
+      render 'static_pages/home'
     end
   end
 
@@ -58,10 +68,11 @@ helper_method :count
   # DELETE /posts/1.json
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url }
-      format.json { head :no_content }
-    end
+    redirect_to root_url
+#    respond_to do |format|
+ #     format.html { redirect_to posts_url }
+  #    format.json { head :no_content }
+    #end
   end
 
   private
@@ -73,5 +84,11 @@ helper_method :count
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:content)
+    end
+
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id])
+    rescue
+      redirect_to root_url if @post.nil?
     end
 end

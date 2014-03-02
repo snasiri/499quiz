@@ -13,6 +13,7 @@ TeamAlpha::Application.routes.draw do
   match '/news', to: 'static_pages#news', via: 'get'
   match '/posts', to: 'posts#index', via: 'get'
 
+
   match '/signin', to: 'sessions#new', via: 'get'
   match '/blogs', to: 'static_pages#blog', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'

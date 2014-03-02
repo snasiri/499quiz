@@ -9,6 +9,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 
 gem 'feedzirra'
+
+# Gem for the forum logic
+gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'will_paginate'
 
 
