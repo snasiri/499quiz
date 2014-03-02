@@ -31,3 +31,17 @@ CSS
   - add a calendar
   - add the ability to import personal rss feeds to a profile (user has many rss_Feeds)
   
+Feb. 26 - Mar. 01
+CSS
+ - cleaned up the color, so typography is easier to read
+ - Updated background image to cover large resolutions
+ - Created new site logo for the website
+
+ Controllers
+ - Added new posts controller
+  * formed associations for users to posts
+  * included posts to individual profile pages for users
+ 
+ Planned Work
+  - Work on calendar implementation
+  - Implement Forem gem for forum framework
