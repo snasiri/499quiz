@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	attr_accessible :name, :email, :password, :password_confirmation
 	has_secure_password
 	before_save { self.email = email.downcase }
-	has_many :posts
+	has_many :posts, dependent: :destroy
 	has_many :certs
 	has_many :jobs
 	validates :name, presence: true, length: {maximum: 50}
@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
   	def User.encrypt(token)
     	Digest::SHA1.hexdigest(token.to_s)
   	end
+
+    def feed
+      Post.where("user_id = ?", id)
+    end
 
   private
 

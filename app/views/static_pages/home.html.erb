@@ -1,5 +1,5 @@
 <% provide(:title, 'Home') %>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title><%= full_title(yield(:title)) %></title>
@@ -10,4 +10,36 @@
 <%=render 'layouts/home' %>
 </div>
 </body>
-</html>
+</html> -->
+
+<% if signed_in? %>
+   <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/post_form' %>
+      </section>
+      <div class="span8">
+      <h3>Post Feed</h3>
+      <%= render 'shared/feed' %>
+      </div>
+    </aside>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to the Security Portal! </h1>
+
+    <h2>
+      This is the home page for <a href="http://it499-securityportal.herokuapp.com/">IT Security Portal (IT499)</a>
+      sample application.
+    </h2>
+    <fieldset border="1">If you already have an account, please sign in:  <%= link_to "Sign in now!", signin_path, class: "btn btn-small btn-primary" %></fieldset>
+
+    <fieldset>If you do not have an account, please register here:  <%= link_to "Sign up now!", signup_path, class: "btn btn-small btn-primary" %></fieldset>
+    
+  </div>
+
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<% end %> 

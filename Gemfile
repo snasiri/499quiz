@@ -10,13 +10,23 @@ gem 'bcrypt-ruby', '3.1.2'
 
 gem 'feedzirra'
 
+# Gem for the forum logic
+gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'will_paginate'
+
+
 # Use sqlite3 as the database for Active Record
 # ~snasiri i added spec here to follow along in chp 6.
 group :development, :test do
 	#gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
 	gem 'pg', '0.17.1'
+
 	gem 'sqlite3'
+
+	gem 'factory_girl_rails', '>= 4.1.0'
+	gem 'faker', '1.2.0'
+
 end
 
 # Use SCSS for stylesheets
