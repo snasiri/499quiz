@@ -14,6 +14,9 @@ gem 'feedzirra'
 gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'will_paginate'
 
+# Gem used to generate random data in the db
+gem 'faker', '1.2.0'
+
 
 # Use sqlite3 as the database for Active Record
 # ~snasiri i added spec here to follow along in chp 6.
@@ -25,7 +28,7 @@ group :development, :test do
 	gem 'sqlite3'
 
 	gem 'factory_girl_rails', '>= 4.1.0'
-	gem 'faker', '1.2.0'
+
 
 end
 
