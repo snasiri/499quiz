@@ -9,6 +9,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'feedzirra'
 
+# Gem for the forum logic
+	gem 'forem', :github => "radar/forem", :branch => "rails4"
 
 gem 'will_paginate'
 
@@ -24,8 +26,7 @@ group :development, :test do
 	gem 'rspec-rails', '2.13.1'
 	gem 'pg', '0.17.1'
 	gem 'sqlite3'
-	# Gem for the forum logic
-		gem 'forem', :github => "radar/forem", :branch => "rails4"
+
 end
 
 # Use SCSS for stylesheets
