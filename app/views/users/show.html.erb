@@ -1,5 +1,5 @@
 <% provide(:title, @user.name) %>
-<div class="row" id="transparent">
+<div class="row">
   <aside class="span4">
     <section>
       <h1>
@@ -8,7 +8,7 @@
       </h1>
     </section>
   </aside>
-  <div class="span8">
+  <div class="span8"  id="transparent">
   <% if @user.posts.any? %>
   	<h3>Posts (<%= @user.posts.count %>) </h3>
   	<ol class="posts">

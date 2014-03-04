@@ -1,5 +1,13 @@
 TeamAlpha::Application.routes.draw do
 
+  # This line mounts Forem's routes at /forums by default.
+  # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
+  # If you would like to change where this extension is mounted, simply change the :at option to something different.
+  #
+  # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
+  mount Forem::Engine, :at => '/forums'
+
+
   #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   get "users/new"
   get "static_pages/home"
@@ -12,6 +20,8 @@ TeamAlpha::Application.routes.draw do
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
   match '/posts', to: 'posts#index', via: 'get'
+
+  match '/forums', to: 'forem/forums#index', via: 'get'
 
 
   match '/signin', to: 'sessions#new', via: 'get'
