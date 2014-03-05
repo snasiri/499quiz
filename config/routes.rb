@@ -20,6 +20,7 @@ TeamAlpha::Application.routes.draw do
   match '/aboutus', to: 'static_pages#aboutus', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
   match '/posts', to: 'posts#index', via: 'get'
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}, via: 'get'
 
   match '/forums', to: 'forem/forums#index', via: 'get'
 

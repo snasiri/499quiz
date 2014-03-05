@@ -17,7 +17,7 @@ background: url('wavy_background.jpg') no-repeat;
 background-position: center;
 background-size: stretch;
 background-repeat: repeat-y;
-padding-top: 60px; 
+padding-top: 100px; 
 }
 
 section { overflow: auto; }
@@ -203,10 +203,10 @@ input {
 }
 .content {
   display: block;
-  color: orange;
+  color: black;
 }
 .timestamp {
-  color: orange;
+  color: #D44302;
 }
 aside {
   textarea {
