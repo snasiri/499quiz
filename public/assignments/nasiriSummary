@@ -9,3 +9,10 @@
 
 3/1/13 - Completed Chapter 8
   - Users can now sign in and out of their accounts.
+
+3/11/13 - Chp 9
+  - Update profile by going to settings after login.
+  - Prevent user from updating any information other than their own.
+  - You can also show every user, and click their name to see their profile and the list is paginated.
+    - Only if you sign in first.
+  
