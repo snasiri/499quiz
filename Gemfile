@@ -13,6 +13,7 @@ gem 'feedzirra'
 	#gem 'forem', :github => "radar/forem", :branch => "rails4"
 
 gem 'will_paginate'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 # Gem used to generate random data in the db
 gem 'faker', '1.2.0'

@@ -5,7 +5,7 @@ TeamAlpha::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
-  mount Forem::Engine, :at => '/forums'
+  #mount Forem::Engine, :at => '/forums'
 
 
   #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
@@ -22,7 +22,7 @@ TeamAlpha::Application.routes.draw do
   match '/posts', to: 'posts#index', via: 'get'
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}, via: 'get'
 
-  match '/forums', to: 'forem/forums#index', via: 'get'
+  #match '/forums', to: 'forem/forums#index', via: 'get'
 
 
   match '/signin', to: 'sessions#new', via: 'get'
